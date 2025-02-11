@@ -5,6 +5,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 .song {
@@ -30,29 +32,38 @@ body {
 
 .one {
   font-size: 4.5rem;
+  font-weight: bold;
+  color: #ff6f61;
 }
 
 .two {
   font-size: 1.2rem;
   font-weight: lighter;
+  color: #555;
 }
 
 .three {
   font-size: 3rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .four .text-box {
-  border: 3px solid #aaa;
-  border-radius: 5px;
+  border: 3px solid #888;
+  border-radius: 10px;
   margin: 0 auto;
-  padding: 10px;
-  position: relative;
-  width: 600px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
 }
 
 .text-box p {
   margin: 0;
   text-align: left;
+  color: #222;
+  font-size: 1.1rem;
 }
 
 .text-box span {
@@ -61,12 +72,17 @@ body {
 
 .text-box .fake-btn {
   background-color: rgb(21, 161, 237);
-  border-radius: 3px;
+  border-radius: 5px;
   bottom: -50px;
   color: #fff;
-  padding: .5rem 1rem;
+  padding: 0.6rem 1.2rem;
   position: absolute;
-  right: 5px;
+  right: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.text-box .fake-btn:hover {
+  background-color: rgb(15, 120, 180);
 }
 
 .five p {
@@ -79,21 +95,24 @@ body {
 .idea-3 strong {
   border-radius: 3px;
   display: inline-block;
-  padding: 3px 5px;
+  padding: 5px 8px;
+  background-color: rgba(21, 161, 237, 0.2);
 }
 
 .five .idea-5 {
   font-size: 4rem;
+  font-weight: bold;
 }
 
-.idea-5 span, .idea-6 span, .wish-hbd span {
+.idea-5 span, 
+.idea-6 span, 
+.wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
-  font-size: 15rem;
+.idea-6 span {
+  font-size: 14rem;
 }
-
 
 .six {
   position: relative;
@@ -105,13 +124,12 @@ body {
   display: inline-block;
   height: 350px;
   max-width: 100%;
-  /* height: auto; */
 }
 
 .six .hat {
-  left: 41.5%;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
-  /* transform: scale(0.1); */
   top: -35%;
   width: 80px;
 }
@@ -119,6 +137,7 @@ body {
 .baloons img {
   display: inline-block;
   position: absolute;
+  opacity: 0.9;
 }
 
 .baloons img:nth-child(even) {
@@ -149,70 +168,28 @@ body {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) {
-  fill: #bd6ecf;
-  left: 5vw;
-  top: 7vh;
-}
-
-.eight svg:nth-child(2) {
-  fill: #7dd175;
-  left: 35vw;
-  top: 23vh;
-}
-
-.eight svg:nth-child(3) {
-  fill: #349d8b;
-  left: 23vw;
-  top: 33vh;
-}
-
-.eight svg:nth-child(4) {
-  fill: #347a9d;
-  left: 57vw;
-  top: 43vh;
-}
-
-.eight svg:nth-child(5) {
-  fill: #c66053;
-  left: 7vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(6) {
-  fill: #bfaa40;
-  left: 77vw;
-  top: 42vh;
-}
-
-.eight svg:nth-child(7) {
-  fill: #e3bae8;
-  left: 83vw;
-  top: 68vh;
-}
-
-.eight svg:nth-child(8) {
-  fill: #8762cb;
-  left: 37vw;
-  top: 86vh;
-}
-
-.eight svg:nth-child(9) {
-  fill: #9a90da;
-  left: 87vw;
-  top: 94vh;
-}
+.eight svg:nth-child(1) { fill: #bd6ecf; left: 5vw; top: 7vh; }
+.eight svg:nth-child(2) { fill: #7dd175; left: 35vw; top: 23vh; }
+.eight svg:nth-child(3) { fill: #349d8b; left: 23vw; top: 33vh; }
+.eight svg:nth-child(4) { fill: #347a9d; left: 57vw; top: 43vh; }
+.eight svg:nth-child(5) { fill: #c66053; left: 7vw; top: 68vh; }
+.eight svg:nth-child(6) { fill: #bfaa40; left: 77vw; top: 42vh; }
+.eight svg:nth-child(7) { fill: #e3bae8; left: 83vw; top: 68vh; }
+.eight svg:nth-child(8) { fill: #8762cb; left: 37vw; top: 86vh; }
+.eight svg:nth-child(9) { fill: #9a90da; left: 87vw; top: 94vh; }
 
 .wish-hbd {
-  font-size: 3em;
+  font-size: 3.2em;
   margin: 0;
   text-transform: uppercase;
+  color: #ff69b4;
 }
 
 .wish h5 {
   font-size: 2rem;
   font-weight: lighter;
   margin: 10px 0 0;
+  color: #444;
 }
 
 .nine p {
@@ -222,41 +199,31 @@ body {
 
 #replay {
   cursor: pointer;
-  z-index: 3;
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background 0.3s ease-in-out;
+}
+
+#replay:hover {
+  background: #ff4c92;
 }
 
 /* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 95%;
   }
 
   .four .text-box {
     width: 90%;
+    padding: 12px;
+  }
+
+  .text-box p {
+    font-size: 1rem;
   }
 
   .text-box .fake-btn {
@@ -269,24 +236,52 @@ body {
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 
   .six .hat {
-    /* top: -20px; */
-    width: 50px;
+    width: 60px;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .one {
+    font-size: 3.5rem;
+  }
+
+  .three {
+    font-size: 2.5rem;
+  }
+
+  .wish-hbd {
+    font-size: 2rem;
+  }
+
+  .wish h5 {
+    font-size: 1.2rem;
+  }
+
+  .nine p {
+    font-size: 1.2rem;
+  }
+
+  .idea-6 span {
+    font-size: 6rem;
+  }
+
+  .six .hat {
+    width: 50px;
   }
 }
